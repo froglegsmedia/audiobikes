@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="AudioBikes — bikes with built-in speakers. Ride loud. Own the road." />
+  <title>AudioBikes — Ride Loud</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="bg-glow" aria-hidden="true"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="logo" href="#top" aria-label="AudioBikes home">
+      <svg class="logo-mark" viewBox="0 0 40 40" width="36" height="36" aria-hidden="true">
+        <circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="2" />
+        <circle cx="20" cy="20" r="6" fill="currentColor" />
+        <path d="M20 2v6M20 32v6M2 20h6M32 20h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        <path d="M8 8l4 4M28 28l4 4M32 8l-4 4M12 28l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.5" />
+      </svg>
+      <span>AudioBikes</span>
+    </a>
+    <nav class="nav">
+      <a href="#features">Features</a>
+      <a href="#waitlist" class="nav-cta">Join Waitlist</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Built for the ride</p>
+        <h1>Bikes that <span class="accent">sound</span> as good as they ride.</h1>
+        <p class="one-liner">AudioBikes — bikes with built-in speakers. Your playlist, your pace, zero earbuds.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#waitlist">Get early access</a>
+          <a class="btn btn-ghost" href="#features">See what’s inside</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <svg class="bike-art" viewBox="0 0 420 280" role="img">
+          <defs>
+            <linearGradient id="neon" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#7c5cff" />
+              <stop offset="50%" stop-color="#ff3d9a" />
+              <stop offset="100%" stop-color="#00e5c0" />
+            </linearGradient>
+            <filter id="softGlow">
+              <feGaussianBlur stdDeviation="3" result="blur" />
+              <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+          </defs>
+          <!-- Rear wheel -->
+          <circle cx="90" cy="190" r="55" fill="none" stroke="url(#neon)" stroke-width="3" filter="url(#softGlow)" />
+          <circle cx="90" cy="190" r="18" fill="#12141c" stroke="#7c5cff" stroke-width="2" />
+          <circle cx="90" cy="190" r="4" fill="#7c5cff" />
+          <!-- Front wheel -->
+          <circle cx="320" cy="190" r="55" fill="none" stroke="url(#neon)" stroke-width="3" filter="url(#softGlow)" />
+          <circle cx="320" cy="190" r="18" fill="#12141c" stroke="#00e5c0" stroke-width="2" />
+          <circle cx="320" cy="190" r="4" fill="#00e5c0" />
+          <!-- Frame -->
+          <path d="M90 190 L180 110 L250 110 L320 190 M180 110 L160 190 M250 110 L180 190"
+                fill="none" stroke="#e8eaf0" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" />
+          <!-- Seat -->
+          <path d="M155 100h50" stroke="#ff3d9a" stroke-width="6" stroke-linecap="round" />
+          <!-- Handlebars -->
+          <path d="M250 110 L270 85 M255 85h40" stroke="#e8eaf0" stroke-width="3.5" stroke-linecap="round" />
+          <!-- Speaker housing on frame -->
+          <rect x="185" y="125" width="55" height="36" rx="8" fill="#1a1d2a" stroke="#7c5cff" stroke-width="2" />
+          <circle cx="200" cy="143" r="8" fill="none" stroke="#00e5c0" stroke-width="2" />
+          <circle cx="200" cy="143" r="3" fill="#00e5c0" />
+          <circle cx="225" cy="143" r="8" fill="none" stroke="#ff3d9a" stroke-width="2" />
+          <circle cx="225" cy="143" r="3" fill="#ff3d9a" />
+          <!-- Sound waves -->
+          <path d="M250 130c8 4 8 22 0 26" fill="none" stroke="#7c5cff" stroke-width="2" opacity="0.7" class="wave" />
+          <path d="M262 122c14 8 14 38 0 46" fill="none" stroke="#ff3d9a" stroke-width="2" opacity="0.5" class="wave delay" />
+          <path d="M274 114c20 12 20 54 0 66" fill="none" stroke="#00e5c0" stroke-width="2" opacity="0.35" class="wave delay2" />
+        </svg>
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <h2>What it is</h2>
+      <p class="section-lead">A bike with speakers built into the frame — music that moves with you.</p>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="40" height="40">
+              <rect x="8" y="14" width="20" height="20" rx="4" fill="none" stroke="currentColor" stroke-width="2.5" />
+              <circle cx="18" cy="24" r="5" fill="none" stroke="currentColor" stroke-width="2" />
+              <path d="M32 16c6 4 6 12 0 16M38 12c10 6 10 18 0 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+            </svg>
+          </div>
+          <h3>Built-in audio</h3>
+          <p>Weather-ready speakers integrated into the frame. Stream from your phone — no dangling buds, no clipped mounts.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="40" height="40">
+              <path d="M8 32c8-16 24-16 32 0" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+              <circle cx="14" cy="34" r="5" fill="none" stroke="currentColor" stroke-width="2.5" />
+              <circle cx="34" cy="34" r="5" fill="none" stroke="currentColor" stroke-width="2.5" />
+              <path d="M24 10v14M18 16l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <h3>Ride-ready design</h3>
+          <p>Sporty geometry meets music-first hardware. Tuned for city and trail — volume that carries without weighing you down.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="40" height="40">
+              <rect x="14" y="8" width="20" height="32" rx="4" fill="none" stroke="currentColor" stroke-width="2.5" />
+              <circle cx="24" cy="34" r="2.5" fill="currentColor" />
+              <path d="M20 16h8M20 22h8" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </div>
+          <h3>Phone-simple control</h3>
+          <p>Pair once, play anything. Skip tracks, raise the volume, and keep your hands on the bars — music that stays out of the way.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="waitlist" class="waitlist">
+      <div class="waitlist-card">
+        <h2>Join the waitlist</h2>
+        <p>Be first when AudioBikes rolls out. Drop your email — we’ll only write when it matters.</p>
+        <form
+          class="waitlist-form"
+          action="https://formspree.io/f/YOUR_FORM_ID"
+          method="POST"
+        >
+          <label class="sr-only" for="name">Name (optional)</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Name (optional)"
+            autocomplete="name"
+          />
+          <label class="sr-only" for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@email.com"
+            required
+            autocomplete="email"
+          />
+          <input type="hidden" name="_subject" value="AudioBikes waitlist signup" />
+          <button type="submit" class="btn btn-primary btn-block">Notify me</button>
+        </form>
+        <noscript>
+          <p class="noscript-fallback">
+            JavaScript is off — email us instead:
+            <a href="mailto:hello@audiobikes.com?subject=AudioBikes%20waitlist">hello@audiobikes.com</a>
+          </p>
+        </noscript>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-brand">
+        <svg class="logo-mark sm" viewBox="0 0 40 40" width="22" height="22" aria-hidden="true">
+          <circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="2" />
+          <circle cx="20" cy="20" r="6" fill="currentColor" />
+        </svg>
+        AudioBikes
+      </p>
+      <p class="footer-meta">Owned by Tyler Forrest · Ride loud.</p>
+      <p class="footer-contact">
+        <a href="mailto:hello@audiobikes.com">hello@audiobikes.com</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
