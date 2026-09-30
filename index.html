@@ -3,26 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="AudioBikes — bikes with built-in speakers. Ride loud. Own the road." />
-  <title>AudioBikes — Ride Loud</title>
+  <meta name="description" content="AudioBikes — vintage soul, modern ride. Bikes with built-in speakers." />
+  <title>AudioBikes — Vintage Soul, Modern Ride</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <div class="bg-glow" aria-hidden="true"></div>
-  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="bg-shapes" aria-hidden="true">
+    <span class="shape shape-circle"></span>
+    <span class="shape shape-diamond"></span>
+    <span class="shape shape-arc"></span>
+  </div>
 
   <header class="site-header">
     <a class="logo" href="#top" aria-label="AudioBikes home">
-      <svg class="logo-mark" viewBox="0 0 40 40" width="36" height="36" aria-hidden="true">
-        <circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="2" />
-        <circle cx="20" cy="20" r="6" fill="currentColor" />
-        <path d="M20 2v6M20 32v6M2 20h6M32 20h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-        <path d="M8 8l4 4M28 28l4 4M32 8l-4 4M12 28l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.5" />
+      <svg class="logo-mark" viewBox="0 0 48 48" width="40" height="40" aria-hidden="true">
+        <!-- Vintage badge / speaker grille -->
+        <rect x="4" y="4" width="40" height="40" rx="10" fill="none" stroke="currentColor" stroke-width="1.75" />
+        <rect x="9" y="9" width="30" height="30" rx="7" fill="none" stroke="currentColor" stroke-width="1" opacity="0.45" />
+        <circle cx="24" cy="24" r="9" fill="none" stroke="currentColor" stroke-width="1.75" />
+        <circle cx="24" cy="24" r="3.5" fill="currentColor" />
+        <circle cx="24" cy="24" r="13.5" fill="none" stroke="currentColor" stroke-width="0.75" opacity="0.35" stroke-dasharray="2 3" />
       </svg>
-      <span>AudioBikes</span>
+      <span class="logo-wordmark">
+        <span class="logo-name">AudioBikes</span>
+        <span class="logo-tag">est. ride</span>
+      </span>
     </a>
     <nav class="nav">
       <a href="#features">Features</a>
@@ -33,104 +43,169 @@
   <main id="top">
     <section class="hero">
       <div class="hero-copy">
-        <p class="eyebrow">Built for the ride</p>
-        <h1>Bikes that <span class="accent">sound</span> as good as they ride.</h1>
-        <p class="one-liner">AudioBikes — bikes with built-in speakers. Your playlist, your pace, zero earbuds.</p>
+        <p class="eyebrow">
+          <svg class="eyebrow-icon" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true">
+            <rect x="2" y="3" width="8" height="10" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.4" />
+            <circle cx="6" cy="8" r="2" fill="none" stroke="currentColor" stroke-width="1.2" />
+            <path d="M12 5.5c1.8 1 1.8 4 0 5" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" />
+          </svg>
+          Vintage soul · Modern ride
+        </p>
+        <h1>Bikes with a <span class="accent">built-in</span> soundtrack.</h1>
+        <p class="one-liner">From chrome-era classics to clean contemporary frames — every AudioBike carries speakers in the bones. Your playlist. Your pace. Zero earbuds.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#waitlist">Get early access</a>
           <a class="btn btn-ghost" href="#features">See what’s inside</a>
         </div>
       </div>
       <div class="hero-visual" aria-hidden="true">
-        <svg class="bike-art" viewBox="0 0 420 280" role="img">
-          <defs>
-            <linearGradient id="neon" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#7c5cff" />
-              <stop offset="50%" stop-color="#ff3d9a" />
-              <stop offset="100%" stop-color="#00e5c0" />
-            </linearGradient>
-            <filter id="softGlow">
-              <feGaussianBlur stdDeviation="3" result="blur" />
-              <feMerge>
-                <feMergeNode in="blur" />
-                <feMergeNode in="SourceGraphic" />
-              </feMerge>
-            </filter>
-          </defs>
-          <!-- Rear wheel -->
-          <circle cx="90" cy="190" r="55" fill="none" stroke="url(#neon)" stroke-width="3" filter="url(#softGlow)" />
-          <circle cx="90" cy="190" r="18" fill="#12141c" stroke="#7c5cff" stroke-width="2" />
-          <circle cx="90" cy="190" r="4" fill="#7c5cff" />
-          <!-- Front wheel -->
-          <circle cx="320" cy="190" r="55" fill="none" stroke="url(#neon)" stroke-width="3" filter="url(#softGlow)" />
-          <circle cx="320" cy="190" r="18" fill="#12141c" stroke="#00e5c0" stroke-width="2" />
-          <circle cx="320" cy="190" r="4" fill="#00e5c0" />
-          <!-- Frame -->
-          <path d="M90 190 L180 110 L250 110 L320 190 M180 110 L160 190 M250 110 L180 190"
-                fill="none" stroke="#e8eaf0" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" />
-          <!-- Seat -->
-          <path d="M155 100h50" stroke="#ff3d9a" stroke-width="6" stroke-linecap="round" />
-          <!-- Handlebars -->
-          <path d="M250 110 L270 85 M255 85h40" stroke="#e8eaf0" stroke-width="3.5" stroke-linecap="round" />
-          <!-- Speaker housing on frame -->
-          <rect x="185" y="125" width="55" height="36" rx="8" fill="#1a1d2a" stroke="#7c5cff" stroke-width="2" />
-          <circle cx="200" cy="143" r="8" fill="none" stroke="#00e5c0" stroke-width="2" />
-          <circle cx="200" cy="143" r="3" fill="#00e5c0" />
-          <circle cx="225" cy="143" r="8" fill="none" stroke="#ff3d9a" stroke-width="2" />
-          <circle cx="225" cy="143" r="3" fill="#ff3d9a" />
-          <!-- Sound waves -->
-          <path d="M250 130c8 4 8 22 0 26" fill="none" stroke="#7c5cff" stroke-width="2" opacity="0.7" class="wave" />
-          <path d="M262 122c14 8 14 38 0 46" fill="none" stroke="#ff3d9a" stroke-width="2" opacity="0.5" class="wave delay" />
-          <path d="M274 114c20 12 20 54 0 66" fill="none" stroke="#00e5c0" stroke-width="2" opacity="0.35" class="wave delay2" />
-        </svg>
+        <div class="hero-frame">
+          <svg class="bike-art" viewBox="0 0 440 300" role="img">
+            <defs>
+              <linearGradient id="chrome" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#f5ead6" />
+                <stop offset="40%" stop-color="#c9a46a" />
+                <stop offset="70%" stop-color="#e8d4b0" />
+                <stop offset="100%" stop-color="#a67c4a" />
+              </linearGradient>
+              <linearGradient id="copper" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#e8b86d" />
+                <stop offset="100%" stop-color="#b87333" />
+              </linearGradient>
+              <linearGradient id="tealGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#4db6a8" />
+                <stop offset="100%" stop-color="#2a9d8f" />
+              </linearGradient>
+              <filter id="softGlow">
+                <feGaussianBlur stdDeviation="2.5" result="blur" />
+                <feMerge>
+                  <feMergeNode in="blur" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+            </defs>
+
+            <!-- Mid-century geometric backdrop -->
+            <circle cx="220" cy="150" r="118" fill="none" stroke="rgba(245,234,214,0.06)" stroke-width="1" />
+            <circle cx="220" cy="150" r="88" fill="none" stroke="rgba(184,115,51,0.12)" stroke-width="1" stroke-dasharray="4 6" />
+            <path d="M60 40 L100 40 L80 72 Z" fill="none" stroke="rgba(77,182,168,0.2)" stroke-width="1.5" />
+            <rect x="340" y="48" width="28" height="28" rx="2" transform="rotate(18 354 62)" fill="none" stroke="rgba(232,184,109,0.25)" stroke-width="1.5" />
+
+            <!-- Rear wheel -->
+            <circle cx="95" cy="200" r="58" fill="none" stroke="url(#chrome)" stroke-width="3" filter="url(#softGlow)" />
+            <circle cx="95" cy="200" r="48" fill="none" stroke="rgba(245,234,214,0.15)" stroke-width="1" />
+            <circle cx="95" cy="200" r="20" fill="#141210" stroke="url(#copper)" stroke-width="2" />
+            <circle cx="95" cy="200" r="5" fill="#c9a46a" />
+            <!-- Spokes -->
+            <g stroke="rgba(245,234,214,0.2)" stroke-width="1">
+              <line x1="95" y1="148" x2="95" y2="252" />
+              <line x1="43" y1="200" x2="147" y2="200" />
+              <line x1="58" y1="163" x2="132" y2="237" />
+              <line x1="132" y1="163" x2="58" y2="237" />
+            </g>
+
+            <!-- Front wheel -->
+            <circle cx="330" cy="200" r="58" fill="none" stroke="url(#chrome)" stroke-width="3" filter="url(#softGlow)" />
+            <circle cx="330" cy="200" r="48" fill="none" stroke="rgba(245,234,214,0.15)" stroke-width="1" />
+            <circle cx="330" cy="200" r="20" fill="#141210" stroke="url(#tealGlow)" stroke-width="2" />
+            <circle cx="330" cy="200" r="5" fill="#4db6a8" />
+            <g stroke="rgba(245,234,214,0.2)" stroke-width="1">
+              <line x1="330" y1="148" x2="330" y2="252" />
+              <line x1="278" y1="200" x2="382" y2="200" />
+              <line x1="293" y1="163" x2="367" y2="237" />
+              <line x1="367" y1="163" x2="293" y2="237" />
+            </g>
+
+            <!-- Frame -->
+            <path d="M95 200 L185 115 L260 115 L330 200 M185 115 L165 200 M260 115 L185 200"
+                  fill="none" stroke="#f5ead6" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round" />
+
+            <!-- Seat (copper accent) -->
+            <path d="M158 105h48" stroke="url(#copper)" stroke-width="7" stroke-linecap="round" />
+
+            <!-- Handlebars -->
+            <path d="M260 115 L282 88 M268 88h42" stroke="#f5ead6" stroke-width="3.25" stroke-linecap="round" />
+
+            <!-- Transistor-radio speaker housing -->
+            <rect x="188" y="128" width="62" height="42" rx="6" fill="#1c1916" stroke="url(#copper)" stroke-width="2" />
+            <rect x="193" y="133" width="52" height="32" rx="4" fill="none" stroke="rgba(245,234,214,0.2)" stroke-width="1" />
+            <!-- Speaker cones -->
+            <circle cx="208" cy="149" r="9" fill="none" stroke="#4db6a8" stroke-width="1.75" />
+            <circle cx="208" cy="149" r="4" fill="#4db6a8" opacity="0.7" />
+            <circle cx="230" cy="149" r="9" fill="none" stroke="#e8b86d" stroke-width="1.75" />
+            <circle cx="230" cy="149" r="4" fill="#e8b86d" opacity="0.7" />
+            <!-- Tiny dial -->
+            
+            <circle cx="242" cy="138" r="2.5" fill="none" stroke="rgba(245,234,214,0.5)" stroke-width="1" />
+
+            <!-- Sound waves -->
+            <path d="M258 136c8 4 8 22 0 26" fill="none" stroke="#4db6a8" stroke-width="2" opacity="0.7" class="wave" />
+            <path d="M270 128c14 8 14 38 0 46" fill="none" stroke="#e8b86d" stroke-width="2" opacity="0.5" class="wave delay" />
+            <path d="M282 120c20 12 20 54 0 66" fill="none" stroke="#c9a46a" stroke-width="2" opacity="0.3" class="wave delay2" />
+          </svg>
+        </div>
       </div>
     </section>
 
     <section id="features" class="features">
+      <p class="section-eyebrow">The ride</p>
       <h2>What it is</h2>
-      <p class="section-lead">A bike with speakers built into the frame — music that moves with you.</p>
+      <p class="section-lead">A bike with speakers built into the frame — music that moves with you, whether the lines are vintage or brand new.</p>
       <div class="feature-grid">
         <article class="feature-card">
           <div class="feature-icon" aria-hidden="true">
             <svg viewBox="0 0 48 48" width="40" height="40">
-              <rect x="8" y="14" width="20" height="20" rx="4" fill="none" stroke="currentColor" stroke-width="2.5" />
-              <circle cx="18" cy="24" r="5" fill="none" stroke="currentColor" stroke-width="2" />
-              <path d="M32 16c6 4 6 12 0 16M38 12c10 6 10 18 0 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+              <!-- Transistor radio motif -->
+              <rect x="8" y="10" width="24" height="28" rx="4" fill="none" stroke="currentColor" stroke-width="2.25" />
+              <circle cx="20" cy="24" r="7" fill="none" stroke="currentColor" stroke-width="1.75" />
+              <circle cx="20" cy="24" r="2.5" fill="currentColor" />
+              <circle cx="26" cy="14" r="1.5" fill="currentColor" opacity="0.6" />
+              <path d="M36 16c6 4 6 12 0 16M42 12c10 6 10 18 0 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" />
             </svg>
           </div>
           <h3>Built-in audio</h3>
-          <p>Weather-ready speakers integrated into the frame. Stream from your phone — no dangling buds, no clipped mounts.</p>
+          <p>Weather-ready speakers integrated into the frame — thinking transistor radio, not clip-on gimmick. Stream from your phone with nothing dangling.</p>
         </article>
         <article class="feature-card">
           <div class="feature-icon" aria-hidden="true">
             <svg viewBox="0 0 48 48" width="40" height="40">
-              <path d="M8 32c8-16 24-16 32 0" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
-              <circle cx="14" cy="34" r="5" fill="none" stroke="currentColor" stroke-width="2.5" />
-              <circle cx="34" cy="34" r="5" fill="none" stroke="currentColor" stroke-width="2.5" />
-              <path d="M24 10v14M18 16l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+              <!-- Vintage + modern bike silhouette -->
+              <circle cx="12" cy="34" r="6" fill="none" stroke="currentColor" stroke-width="2.25" />
+              <circle cx="36" cy="34" r="6" fill="none" stroke="currentColor" stroke-width="2.25" />
+              <path d="M12 34 L22 18 L32 18 L36 34 M22 18 L18 34 M32 18 L22 34" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+              <path d="M20 14h10" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+              <path d="M32 18 L36 10 M34 10h8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
             </svg>
           </div>
-          <h3>Ride-ready design</h3>
-          <p>Sporty geometry meets music-first hardware. Tuned for city and trail — volume that carries without weighing you down.</p>
+          <h3>Vintage &amp; modern lines</h3>
+          <p>Models span chrome-era soul and sharp contemporary geometry. Same music-first hardware — tuned for city streets and long weekend loops.</p>
         </article>
         <article class="feature-card">
           <div class="feature-icon" aria-hidden="true">
             <svg viewBox="0 0 48 48" width="40" height="40">
-              <rect x="14" y="8" width="20" height="32" rx="4" fill="none" stroke="currentColor" stroke-width="2.5" />
-              <circle cx="24" cy="34" r="2.5" fill="currentColor" />
-              <path d="M20 16h8M20 22h8" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              <!-- Phone + simple dial -->
+              <rect x="14" y="6" width="20" height="36" rx="4" fill="none" stroke="currentColor" stroke-width="2.25" />
+              <rect x="18" y="12" width="12" height="18" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.7" />
+              <circle cx="24" cy="36" r="2.5" fill="currentColor" />
             </svg>
           </div>
           <h3>Phone-simple control</h3>
-          <p>Pair once, play anything. Skip tracks, raise the volume, and keep your hands on the bars — music that stays out of the way.</p>
+          <p>Pair once, play anything. Skip tracks, raise the volume, keep your hands on the bars — music that stays out of the way.</p>
         </article>
       </div>
     </section>
 
     <section id="waitlist" class="waitlist">
       <div class="waitlist-card">
+        <div class="waitlist-badge" aria-hidden="true">
+          <svg viewBox="0 0 64 64" width="48" height="48">
+            <rect x="8" y="8" width="48" height="48" rx="12" fill="none" stroke="currentColor" stroke-width="2" />
+            <circle cx="32" cy="32" r="12" fill="none" stroke="currentColor" stroke-width="2" />
+            <circle cx="32" cy="32" r="4.5" fill="currentColor" />
+          </svg>
+        </div>
         <h2>Join the waitlist</h2>
-        <p>Be first when AudioBikes rolls out. Drop your email — we’ll only write when it matters.</p>
+        <p>Be first when AudioBikes rolls out — vintage souls and modern rides alike. Drop your email; we’ll only write when it matters.</p>
         <form
           class="waitlist-form"
           action="https://formspree.io/f/YOUR_FORM_ID"
@@ -169,13 +244,14 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <p class="footer-brand">
-        <svg class="logo-mark sm" viewBox="0 0 40 40" width="22" height="22" aria-hidden="true">
-          <circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="2" />
-          <circle cx="20" cy="20" r="6" fill="currentColor" />
+        <svg class="logo-mark sm" viewBox="0 0 48 48" width="24" height="24" aria-hidden="true">
+          <rect x="4" y="4" width="40" height="40" rx="10" fill="none" stroke="currentColor" stroke-width="2" />
+          <circle cx="24" cy="24" r="9" fill="none" stroke="currentColor" stroke-width="2" />
+          <circle cx="24" cy="24" r="3.5" fill="currentColor" />
         </svg>
         AudioBikes
       </p>
-      <p class="footer-meta">Owned by Tyler Forrest · Ride loud.</p>
+      <p class="footer-meta">Owned by Tyler Forrest · Vintage soul, modern ride.</p>
       <p class="footer-contact">
         <a href="mailto:hello@audiobikes.com">hello@audiobikes.com</a>
       </p>
