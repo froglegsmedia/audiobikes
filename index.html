@@ -3,185 +3,176 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="AudioBikes — vintage soul, modern ride. Bikes with built-in speakers." />
-  <title>AudioBikes — Vintage Soul, Modern Ride</title>
+  <meta name="description" content="AudioBikes — bikes with built-in speakers. Vintage soul, modern ride. California garage energy." />
+  <title>AudioBikes — Ride with Your Soundtrack</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <!-- Decorative sticker scraps (SVG only) -->
+  <div class="scrap scrap-a" aria-hidden="true">
+    <svg viewBox="0 0 80 40" width="72" height="36">
+      <ellipse cx="40" cy="20" rx="36" ry="16" fill="#f4a261" opacity="0.55" />
+      <text x="40" y="25" text-anchor="middle" font-family="Caveat, cursive" font-size="14" fill="#2c4a6e">ride loud</text>
+    </svg>
+  </div>
+  <div class="scrap scrap-b" aria-hidden="true">
+    <svg viewBox="0 0 56 56" width="48" height="48">
+      <circle cx="28" cy="28" r="24" fill="#7ba3c4" opacity="0.4" />
+      <circle cx="28" cy="28" r="10" fill="none" stroke="#2c4a6e" stroke-width="2" opacity="0.6" />
+      <circle cx="28" cy="28" r="3" fill="#e8913a" />
+    </svg>
+  </div>
+
   <header class="site-header">
     <a class="logo" href="#top" aria-label="AudioBikes home">
-      <svg class="logo-mark" viewBox="0 0 40 40" width="36" height="36" aria-hidden="true">
-        <circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="2.5" />
-        <circle cx="20" cy="20" r="11" fill="none" stroke="currentColor" stroke-width="1.75" />
-        <circle cx="20" cy="20" r="4" fill="currentColor" />
+      <svg class="logo-mark" viewBox="0 0 40 40" width="34" height="34" aria-hidden="true">
+        <circle cx="20" cy="20" r="17" fill="#7ba3c4" opacity="0.35" />
+        <circle cx="20" cy="20" r="17" fill="none" stroke="#2c4a6e" stroke-width="2" />
+        <circle cx="20" cy="20" r="8" fill="none" stroke="#2c4a6e" stroke-width="1.5" />
+        <circle cx="20" cy="20" r="3" fill="#e8913a" />
       </svg>
       <span class="logo-name">AudioBikes</span>
     </a>
     <nav class="nav">
-      <a href="#features">Features</a>
-      <a href="#waitlist" class="nav-cta">Join Waitlist</a>
+      <a href="#features">The goods</a>
+      <a href="#waitlist" class="nav-cta">Jump the list</a>
     </nav>
   </header>
 
   <main id="top">
     <section class="hero">
-      <div class="hero-meta">
-        <p class="eyebrow">Issue №03 · Ride + Sound</p>
-        <span class="hero-rule" aria-hidden="true"></span>
-        <p class="hero-edition">Vintage &amp; modern models</p>
+      <div class="hero-copy">
+        <p class="scribble">from the garage · est. whenever</p>
+        <h1>AudioBikes</h1>
+        <p class="tagline">Bikes with speakers built right in — so your playlist doesn’t live in your ears, it lives on the street.</p>
+        <p class="one-liner">Chrome-era cruisers and clean modern frames. Same idea: music that rolls with you.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#waitlist">Save me a spot</a>
+          <a class="btn btn-ghost" href="#features">What’s inside</a>
+        </div>
       </div>
 
-      <div class="hero-poster">
-        <div class="hero-type">
-          <h1 class="display">
-            <span class="display-line">Audio</span>
-            <span class="display-line accent">Bikes</span>
-          </h1>
-          <p class="one-liner">Bikes with built-in speakers. Your playlist rides in the frame — chrome-era classics and clean contemporary lines.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#waitlist">Get early access</a>
-            <a class="btn btn-ghost" href="#features">See the details</a>
-          </div>
-        </div>
-
-        <div class="hero-visual" aria-hidden="true">
-          <div class="stamp">
-            <svg class="stamp-ring" viewBox="0 0 120 120" width="120" height="120">
-              <circle cx="60" cy="60" r="54" fill="none" stroke="currentColor" stroke-width="3" />
-              <circle cx="60" cy="60" r="46" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 4" />
-              <text x="60" y="52" text-anchor="middle" class="stamp-text">EST.</text>
-              <text x="60" y="72" text-anchor="middle" class="stamp-text bold">RIDE</text>
-            </svg>
-          </div>
-          <svg class="bike-art" viewBox="0 0 440 280" role="img">
-            <!-- Bold simplified bike — ink + orange accent -->
-            <!-- Rear wheel -->
-            <circle cx="90" cy="195" r="62" fill="none" stroke="#1A1A1A" stroke-width="5" />
-            <circle cx="90" cy="195" r="18" fill="none" stroke="#1A1A1A" stroke-width="4" />
-            <circle cx="90" cy="195" r="6" fill="#FF4D00" />
-            <g stroke="#1A1A1A" stroke-width="2">
-              <line x1="90" y1="133" x2="90" y2="257" />
-              <line x1="28" y1="195" x2="152" y2="195" />
-              <line x1="46" y1="151" x2="134" y2="239" />
-              <line x1="134" y1="151" x2="46" y2="239" />
+      <div class="hero-collage" aria-hidden="true">
+        <!-- Polaroid-ish sticker frame with bike -->
+        <div class="sticker sticker-bike">
+          <svg class="bike-art" viewBox="0 0 420 270" role="img">
+            <!-- Washed blue rear wheel -->
+            <circle cx="85" cy="185" r="58" fill="#a8c5d8" opacity="0.45" />
+            <circle cx="85" cy="185" r="58" fill="none" stroke="#2c4a6e" stroke-width="4" />
+            <circle cx="85" cy="185" r="16" fill="none" stroke="#2c4a6e" stroke-width="3" />
+            <circle cx="85" cy="185" r="5" fill="#e8913a" />
+            <g stroke="#2c4a6e" stroke-width="1.75" opacity="0.7">
+              <line x1="85" y1="127" x2="85" y2="243" />
+              <line x1="27" y1="185" x2="143" y2="185" />
+              <line x1="44" y1="144" x2="126" y2="226" />
+              <line x1="126" y1="144" x2="44" y2="226" />
             </g>
 
             <!-- Front wheel -->
-            <circle cx="340" cy="195" r="62" fill="none" stroke="#1A1A1A" stroke-width="5" />
-            <circle cx="340" cy="195" r="18" fill="none" stroke="#1A1A1A" stroke-width="4" />
-            <circle cx="340" cy="195" r="6" fill="#FF4D00" />
-            <g stroke="#1A1A1A" stroke-width="2">
-              <line x1="340" y1="133" x2="340" y2="257" />
-              <line x1="278" y1="195" x2="402" y2="195" />
-              <line x1="296" y1="151" x2="384" y2="239" />
-              <line x1="384" y1="151" x2="296" y2="239" />
+            <circle cx="325" cy="185" r="58" fill="#a8c5d8" opacity="0.45" />
+            <circle cx="325" cy="185" r="58" fill="none" stroke="#2c4a6e" stroke-width="4" />
+            <circle cx="325" cy="185" r="16" fill="none" stroke="#2c4a6e" stroke-width="3" />
+            <circle cx="325" cy="185" r="5" fill="#e8913a" />
+            <g stroke="#2c4a6e" stroke-width="1.75" opacity="0.7">
+              <line x1="325" y1="127" x2="325" y2="243" />
+              <line x1="267" y1="185" x2="383" y2="185" />
+              <line x1="284" y1="144" x2="366" y2="226" />
+              <line x1="366" y1="144" x2="284" y2="226" />
             </g>
 
-            <!-- Frame -->
-            <path d="M90 195 L185 100 L265 100 L340 195 M185 100 L160 195 M265 100 L185 195"
-                  fill="none" stroke="#1A1A1A" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" />
+            <!-- Frame — sun-faded orange accent on seat -->
+            <path d="M85 185 L175 95 L255 95 L325 185 M175 95 L155 185 M255 95 L175 185"
+                  fill="none" stroke="#2c4a6e" stroke-width="5.5" stroke-linejoin="round" stroke-linecap="round" />
+            <path d="M148 84h46" stroke="#e8913a" stroke-width="7" stroke-linecap="round" />
+            <path d="M255 95 L278 70 M266 70h44" stroke="#2c4a6e" stroke-width="4.5" stroke-linecap="round" />
 
-            <!-- Seat -->
-            <path d="M155 88h50" stroke="#FF4D00" stroke-width="8" stroke-linecap="round" />
+            <!-- Speaker block in frame -->
+            <rect x="182" y="112" width="64" height="44" rx="4" fill="#2c4a6e" />
+            <circle cx="203" cy="134" r="10" fill="none" stroke="#f7f1e8" stroke-width="2" />
+            <circle cx="203" cy="134" r="3.5" fill="#e8913a" />
+            <circle cx="225" cy="134" r="10" fill="none" stroke="#f7f1e8" stroke-width="2" />
+            <circle cx="225" cy="134" r="3.5" fill="#e8913a" />
 
-            <!-- Handlebars -->
-            <path d="M265 100 L290 72 M275 72h48" stroke="#1A1A1A" stroke-width="5" stroke-linecap="round" />
+            <!-- Soft sound arcs -->
+            <path d="M256 122c9 5 9 22 0 28" fill="none" stroke="#e8913a" stroke-width="2.5" stroke-linecap="round" opacity="0.8" />
+            <path d="M268 112c14 9 14 36 0 46" fill="none" stroke="#e8913a" stroke-width="2.5" stroke-linecap="round" opacity="0.45" />
+          </svg>
+          <span class="sticker-caption">weekend prototype · still dusty</span>
+        </div>
 
-            <!-- Speaker housing (bold block) -->
-            <rect x="190" y="118" width="68" height="48" rx="2" fill="#1A1A1A" />
-            <circle cx="212" cy="142" r="11" fill="none" stroke="#F5F0E8" stroke-width="2.5" />
-            <circle cx="212" cy="142" r="4" fill="#FF4D00" />
-            <circle cx="236" cy="142" r="11" fill="none" stroke="#F5F0E8" stroke-width="2.5" />
-            <circle cx="236" cy="142" r="4" fill="#FF4D00" />
-
-            <!-- Sound arcs -->
-            <path d="M268 128c10 6 10 24 0 30" fill="none" stroke="#FF4D00" stroke-width="3" stroke-linecap="round" />
-            <path d="M282 118c16 10 16 40 0 50" fill="none" stroke="#FF4D00" stroke-width="3" stroke-linecap="round" opacity="0.55" />
+        <!-- Overlapping mini sticker -->
+        <div class="sticker sticker-badge">
+          <svg viewBox="0 0 100 100" width="88" height="88">
+            <path d="M50 6 L58 28 L82 22 L72 42 L94 54 L72 62 L82 84 L58 72 L50 94 L42 72 L18 84 L28 62 L6 54 L28 42 L18 22 L42 28 Z"
+                  fill="#f4a261" stroke="#2c4a6e" stroke-width="2" />
+            <text x="50" y="48" text-anchor="middle" font-family="Caveat, cursive" font-size="13" fill="#2c4a6e" font-weight="700">zero</text>
+            <text x="50" y="64" text-anchor="middle" font-family="Caveat, cursive" font-size="13" fill="#2c4a6e" font-weight="700">earbuds</text>
           </svg>
         </div>
       </div>
-
-      <div class="hero-bar" aria-hidden="true">
-        <span>Speaker-in-frame</span>
-        <span class="dot"></span>
-        <span>Zero earbuds</span>
-        <span class="dot"></span>
-        <span>City &amp; weekend</span>
-      </div>
     </section>
-
-    <hr class="section-rule" />
 
     <section id="features" class="features">
-      <div class="features-head">
-        <p class="section-eyebrow">01 — Specs</p>
-        <h2>What it is</h2>
-        <p class="section-lead">A bike with speakers built into the frame — music that moves with you, whether the lines are vintage or brand new.</p>
+      <div class="features-intro">
+        <p class="scribble">three things we keep coming back to</p>
+        <h2>What’s actually on the bike</h2>
+        <p class="section-lead">No pitch deck. Just the stuff that makes a Saturday ride feel like a mixtape.</p>
       </div>
 
-      <div class="feature-grid">
-        <article class="feature-card">
-          <span class="feature-num" aria-hidden="true">01</span>
+      <div class="feature-stack">
+        <article class="feature-card feature-a">
           <div class="feature-icon" aria-hidden="true">
-            <svg viewBox="0 0 48 48" width="36" height="36">
-              <rect x="8" y="12" width="22" height="24" rx="1" fill="none" stroke="currentColor" stroke-width="2.5" />
-              <circle cx="19" cy="24" r="7" fill="none" stroke="currentColor" stroke-width="2" />
-              <circle cx="19" cy="24" r="2.5" fill="currentColor" />
-              <path d="M34 16c6 4 6 12 0 16M40 12c10 6 10 18 0 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+            <svg viewBox="0 0 52 52" width="40" height="40">
+              <rect x="6" y="12" width="24" height="28" rx="3" fill="#a8c5d8" opacity="0.5" />
+              <rect x="6" y="12" width="24" height="28" rx="3" fill="none" stroke="#2c4a6e" stroke-width="2.25" />
+              <circle cx="18" cy="26" r="7" fill="none" stroke="#2c4a6e" stroke-width="2" />
+              <circle cx="18" cy="26" r="2.5" fill="#e8913a" />
+              <path d="M36 16c7 4 7 14 0 18M42 11c11 7 11 21 0 28" fill="none" stroke="#e8913a" stroke-width="2.25" stroke-linecap="round" />
             </svg>
           </div>
-          <h3>Built-in audio</h3>
-          <p>Weather-ready speakers integrated into the frame — thinking transistor radio, not clip-on gimmick. Stream from your phone with nothing dangling.</p>
+          <h3>Speakers in the frame</h3>
+          <p>Weather-ready audio tucked into the tubing — more transistor radio than clip-on gimmick. Stream from your phone; nothing dangling off the bars.</p>
         </article>
 
-        <article class="feature-card">
-          <span class="feature-num" aria-hidden="true">02</span>
+        <article class="feature-card feature-b">
           <div class="feature-icon" aria-hidden="true">
-            <svg viewBox="0 0 48 48" width="36" height="36">
-              <circle cx="12" cy="34" r="6" fill="none" stroke="currentColor" stroke-width="2.5" />
-              <circle cx="36" cy="34" r="6" fill="none" stroke="currentColor" stroke-width="2.5" />
-              <path d="M12 34 L22 18 L32 18 L36 34 M22 18 L18 34 M32 18 L22 34" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linejoin="round" />
-              <path d="M20 14h10" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" />
-              <path d="M32 18 L36 10 M34 10h8" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" />
+            <svg viewBox="0 0 52 52" width="40" height="40">
+              <circle cx="12" cy="36" r="7" fill="#a8c5d8" opacity="0.45" />
+              <circle cx="12" cy="36" r="7" fill="none" stroke="#2c4a6e" stroke-width="2.25" />
+              <circle cx="38" cy="36" r="7" fill="#a8c5d8" opacity="0.45" />
+              <circle cx="38" cy="36" r="7" fill="none" stroke="#2c4a6e" stroke-width="2.25" />
+              <path d="M12 36 L23 18 L34 18 L38 36 M23 18 L19 36 M34 18 L23 36" fill="none" stroke="#2c4a6e" stroke-width="2.1" stroke-linejoin="round" />
+              <path d="M21 14h11" stroke="#e8913a" stroke-width="3.5" stroke-linecap="round" />
+              <path d="M34 18 L38 9 M36 9h8" fill="none" stroke="#2c4a6e" stroke-width="2.1" stroke-linecap="round" />
             </svg>
           </div>
-          <h3>Vintage &amp; modern lines</h3>
-          <p>Models span chrome-era soul and sharp contemporary geometry. Same music-first hardware — tuned for city streets and long weekend loops.</p>
+          <h3>Vintage &amp; modern models</h3>
+          <p>Some frames look like they rolled out of a ’70s shop window. Others are sharp and new. Same music-first guts either way — city blocks or long coast loops.</p>
         </article>
 
-        <article class="feature-card">
-          <span class="feature-num" aria-hidden="true">03</span>
+        <article class="feature-card feature-c">
           <div class="feature-icon" aria-hidden="true">
-            <svg viewBox="0 0 48 48" width="36" height="36">
-              <rect x="14" y="6" width="20" height="36" rx="3" fill="none" stroke="currentColor" stroke-width="2.5" />
-              <rect x="18" y="12" width="12" height="18" rx="1" fill="none" stroke="currentColor" stroke-width="1.75" />
-              <circle cx="24" cy="36" r="2.5" fill="currentColor" />
+            <svg viewBox="0 0 52 52" width="40" height="40">
+              <rect x="14" y="5" width="22" height="40" rx="4" fill="#f4a261" opacity="0.35" />
+              <rect x="14" y="5" width="22" height="40" rx="4" fill="none" stroke="#2c4a6e" stroke-width="2.25" />
+              <rect x="19" y="12" width="12" height="18" rx="1.5" fill="none" stroke="#2c4a6e" stroke-width="1.75" />
+              <circle cx="25" cy="38" r="2.5" fill="#e8913a" />
             </svg>
           </div>
-          <h3>Phone-simple control</h3>
-          <p>Pair once, play anything. Skip tracks, raise the volume, keep your hands on the bars — music that stays out of the way.</p>
+          <h3>Phone does the thinking</h3>
+          <p>Pair once. Play whatever. Skip a track, bump the volume, keep both hands where they belong. The bike stays quiet about the tech.</p>
         </article>
       </div>
     </section>
 
-    <hr class="section-rule" />
-
     <section id="waitlist" class="waitlist">
-      <div class="waitlist-card">
-        <div class="waitlist-stamp" aria-hidden="true">
-          <svg viewBox="0 0 80 80" width="64" height="64">
-            <circle cx="40" cy="40" r="36" fill="none" stroke="currentColor" stroke-width="2.5" />
-            <circle cx="40" cy="40" r="28" fill="none" stroke="currentColor" stroke-width="1.5" />
-            <circle cx="40" cy="40" r="10" fill="none" stroke="currentColor" stroke-width="2" />
-            <circle cx="40" cy="40" r="3.5" fill="currentColor" />
-          </svg>
-        </div>
-        <p class="section-eyebrow">02 — Access</p>
-        <h2>Join the waitlist</h2>
-        <p>Be first when AudioBikes rolls out — vintage souls and modern rides alike. Drop your email; we’ll only write when it matters.</p>
+      <div class="waitlist-note">
+        <p class="scribble note-corner">hey — leave your email</p>
+        <h2>Get on the list</h2>
+        <p class="waitlist-blurb">We’re still wrenching in the garage. When AudioBikes are ready — vintage souls and modern rides — you’ll hear from us first. No spam, just the drop.</p>
         <form
           class="waitlist-form"
           action="https://formspree.io/f/YOUR_FORM_ID"
@@ -205,7 +196,7 @@
             autocomplete="email"
           />
           <input type="hidden" name="_subject" value="AudioBikes waitlist signup" />
-          <button type="submit" class="btn btn-primary btn-block">Notify me</button>
+          <button type="submit" class="btn btn-primary btn-block">Count me in</button>
         </form>
         <noscript>
           <p class="noscript-fallback">
@@ -213,22 +204,25 @@
             <a href="mailto:hello@audiobikes.com?subject=AudioBikes%20waitlist">hello@audiobikes.com</a>
           </p>
         </noscript>
+        <svg class="tape" viewBox="0 0 120 28" width="100" height="24" aria-hidden="true">
+          <rect x="2" y="4" width="116" height="18" fill="#a8c5d8" opacity="0.55" transform="rotate(-1 60 14)" />
+          <rect x="2" y="4" width="116" height="18" fill="none" stroke="#7ba3c4" stroke-width="1" opacity="0.7" transform="rotate(-1 60 14)" />
+        </svg>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="footer-rule" aria-hidden="true"></div>
     <div class="footer-inner">
       <p class="footer-brand">
-        <svg class="logo-mark sm" viewBox="0 0 40 40" width="22" height="22" aria-hidden="true">
-          <circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="2.5" />
-          <circle cx="20" cy="20" r="11" fill="none" stroke="currentColor" stroke-width="1.75" />
-          <circle cx="20" cy="20" r="4" fill="currentColor" />
+        <svg class="logo-mark sm" viewBox="0 0 40 40" width="20" height="20" aria-hidden="true">
+          <circle cx="20" cy="20" r="17" fill="none" stroke="currentColor" stroke-width="2" />
+          <circle cx="20" cy="20" r="8" fill="none" stroke="currentColor" stroke-width="1.5" />
+          <circle cx="20" cy="20" r="3" fill="#e8913a" />
         </svg>
         AudioBikes
       </p>
-      <p class="footer-meta">Owned by Tyler Forrest · Vintage soul, modern ride.</p>
+      <p class="footer-meta">Owned by Tyler Forrest · Built for people who ride with the windows down (even when there aren’t any).</p>
       <p class="footer-contact">
         <a href="mailto:hello@audiobikes.com">hello@audiobikes.com</a>
       </p>
