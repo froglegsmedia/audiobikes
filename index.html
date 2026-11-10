@@ -26,6 +26,11 @@
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="preload" href="assets/fonts/montserrat-800.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
+  <script>
+    if (new URLSearchParams(location.search).get("joined") === "1") {
+      document.documentElement.classList.add("is-joined");
+    }
+  </script>
 </head>
 <body>
   <svg class="defs" aria-hidden="true" focusable="false">
@@ -73,6 +78,30 @@
             <p>Coming soon</p>
           </article>
         </div>
+      </section>
+
+      <section class="band build" id="build" aria-labelledby="build-heading">
+        <h2 id="build-heading">Want to build your own bike?</h2>
+        <p>We offer consultations and will guide you step by step to your perfect bike.</p>
+        <a class="btn" href="mailto:tyler@froglegsmedia.com?subject=audiobikes%20consultation">Book a consultation</a>
+      </section>
+
+      <section class="band waitlist" id="waitlist" aria-labelledby="waitlist-heading">
+        <h2 id="waitlist-heading">Join the waitlist</h2>
+        <p class="waitlist-lede">Be the first to hear when VE-Bike and Shadow drop.</p>
+        <p class="joined-note" role="status">You're on the list.</p>
+        <form class="waitlist-form" action="https://formsubmit.co/tyler@froglegsmedia.com" method="POST">
+          <input type="hidden" name="_subject" value="audiobikes waitlist signup">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://audiobikes.com/?joined=1">
+          <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="waitlist-row">
+            <label class="sr-only" for="email">Email</label>
+            <input id="email" name="email" type="email" required autocomplete="email" inputmode="email" placeholder="Email">
+            <button class="btn" type="submit">Notify me</button>
+          </div>
+        </form>
       </section>
     </main>
 
