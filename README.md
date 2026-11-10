@@ -1,5 +1,7 @@
 # audiobikes
 
+Bikes that sound as good as they look.
+
 One-page site for audiobikes — bikes with built-in speakers.
 
 Static HTML and CSS for GitHub Pages. No build step and no framework. The custom domain is [audiobikes.com](https://audiobikes.com) (`CNAME`).
