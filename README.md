@@ -1,8 +1,8 @@
-# audiobikes
+# Audiobikes
 
 Bikes that sound as good as they look.
 
-One-page site for audiobikes — bikes with built-in speakers.
+One-page site for Audiobikes — bikes with built-in speakers.
 
 Static HTML and CSS for GitHub Pages. No build step and no framework. The custom domain is [audiobikes.com](https://audiobikes.com) (`CNAME`).
 
@@ -19,7 +19,7 @@ Open [http://127.0.0.1:8080](http://127.0.0.1:8080).
 | File | What it is |
 | --- | --- |
 | `assets/audiobikes-logo.svg` | Lockup, black on white |
-| `assets/audiobikes-logo.png` | Same lockup, 3600px wide, white background. Used as the Open Graph image. |
+| `assets/audiobikes-logo.png` | Same lockup, 3600×835, white background. Used as the Open Graph image. |
 | `assets/audiobikes-logo-transparent.png` | Same lockup, transparent background |
 | `assets/favicon.svg` | Line mark only |
 
