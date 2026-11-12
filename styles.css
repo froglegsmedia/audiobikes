@@ -186,7 +186,12 @@ h3 {
 }
 
 .btn:focus-visible,
-.waitlist-row input:focus-visible {
+.waitlist-row input:focus-visible,
+.wizard input:focus-visible,
+.wizard textarea:focus-visible,
+.choice:has(input:focus-visible),
+.wizard-step:focus-visible,
+.prefer-email a:focus-visible {
   outline: 2px solid var(--ink);
   outline-offset: 3px;
 }
@@ -243,9 +248,20 @@ html.is-joined .joined-note {
 }
 
 .site-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
   padding: clamp(4.25rem, 10vw, 6.5rem) 0 2.25rem;
   text-align: center;
   font-size: 0.9rem;
+}
+
+.footer-logo {
+  display: block;
+  width: min(70vw, 16.5rem);
+  height: auto;
+  flex: 0 0 auto;
 }
 
 @media (min-width: 720px) {
@@ -267,6 +283,12 @@ html.is-joined .joined-note {
     width: auto;
   }
 
+  .site-footer {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.15rem;
+  }
+
   .waitlist-row {
     flex-direction: row;
     align-items: stretch;
@@ -278,5 +300,291 @@ html.is-joined .joined-note {
 
   .waitlist-row .btn {
     width: auto;
+  }
+
+  .wizard {
+    padding: 1.4rem 1.35rem 1.25rem;
+  }
+}
+
+.consult-note {
+  display: none;
+}
+
+html.is-consulted .build-lede,
+html.is-consulted .wizard,
+html.is-consulted .prefer-email {
+  display: none;
+}
+
+html.is-consulted .consult-note {
+  display: block;
+}
+
+.wizard {
+  margin-top: 1.5rem;
+  padding: 1.15rem 1rem 1.1rem;
+  border: 1px solid var(--ink);
+  text-align: left;
+  min-width: 0;
+}
+
+.wizard-title {
+  margin: 0 0 1.1rem;
+  font-size: clamp(1.2rem, 2.4vw, 1.45rem);
+  text-align: center;
+}
+
+.wizard-progress {
+  display: none;
+  margin-bottom: 1.15rem;
+}
+
+html.js .wizard-progress {
+  display: block;
+}
+
+.wizard-status {
+  margin: 0 0 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+.wizard-segments {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 0.35rem;
+}
+
+.wizard-segments span {
+  display: block;
+  height: 0.35rem;
+  border: 1px solid var(--ink);
+  background: var(--paper);
+}
+
+.wizard-segments span.is-on {
+  background: var(--ink);
+}
+
+.wizard-step {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+  min-inline-size: 0;
+}
+
+.wizard-step-review {
+  display: none;
+}
+
+html.js .wizard-step {
+  display: none;
+}
+
+html.js .wizard-step.is-current {
+  display: flex;
+}
+
+.wizard-step legend,
+.wizard-question {
+  margin: 0;
+  padding: 0;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  font-size: 1.2rem;
+  line-height: 1.15;
+}
+
+.wizard-step:focus {
+  outline: none;
+}
+
+.wizard-step:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.choices {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.choice {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 3rem;
+  padding: 0.65rem 0.9rem;
+  border: 1px solid var(--ink);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+.choice:hover,
+.choice:has(input:checked) {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.choice input:focus,
+.choice input:focus-visible {
+  outline: none;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+
+.optional {
+  font-weight: 400;
+}
+
+.wizard input[type="text"]:not(.hp),
+.wizard input[type="email"],
+.wizard input[type="tel"],
+.wizard textarea {
+  width: 100%;
+  min-height: 3rem;
+  padding: 0.8rem 0.9rem;
+  border: 1px solid var(--ink);
+  background: var(--paper);
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.4;
+}
+
+.wizard textarea {
+  min-height: 7rem;
+  resize: vertical;
+}
+
+.field-error {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.field-error:empty {
+  display: none;
+}
+
+.review-help {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.review {
+  margin: 0;
+}
+
+.review div {
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--ink);
+}
+
+.review div:first-child {
+  border-top: 1px solid var(--ink);
+}
+
+.review dt {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.review dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.wizard-nav {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.wizard-back,
+.wizard-next {
+  display: none;
+}
+
+html.js .wizard-back,
+html.js .wizard-next {
+  display: inline-flex;
+}
+
+html.js .wizard-back.is-hidden,
+html.js .wizard-next.is-hidden {
+  display: none;
+}
+
+html.js .wizard-submit {
+  display: none;
+}
+
+html.js .wizard-submit.is-visible {
+  display: inline-flex;
+}
+
+.wizard .wizard-nav .btn {
+  flex: 1 1 0;
+  width: auto;
+  margin-top: 0;
+}
+
+.btn-ghost {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.btn-ghost:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.prefer-email {
+  margin: 0.95rem 0 0;
+  font-size: 0.85rem;
+}
+
+.prefer-email a {
+  color: inherit;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 720px) {
+  .review div {
+    grid-template-columns: 9.5rem 1fr;
+    column-gap: 0.75rem;
+    align-items: baseline;
   }
 }

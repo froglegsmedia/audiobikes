@@ -27,8 +27,13 @@
   <link rel="preload" href="assets/fonts/montserrat-800.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
   <script>
-    if (new URLSearchParams(location.search).get("joined") === "1") {
+    document.documentElement.classList.add("js");
+    var params = new URLSearchParams(location.search);
+    if (params.get("joined") === "1") {
       document.documentElement.classList.add("is-joined");
+    }
+    if (params.get("consult") === "1") {
+      document.documentElement.classList.add("is-consulted");
     }
   </script>
 </head>
@@ -65,8 +70,140 @@
 
       <section class="band build" id="build" aria-labelledby="build-heading">
         <h2 id="build-heading">Want to build your own bike?</h2>
-        <p>We offer consultations and will guide you step by step to your perfect bike.</p>
-        <a class="btn" href="mailto:tyler@froglegsmedia.com?subject=audiobikes%20consultation">Book a consultation</a>
+        <p class="build-lede">We offer consultations and will guide you step by step to your perfect bike.</p>
+        <p class="consult-note" role="status">Request received. We'll be in touch.</p>
+
+        <form class="wizard" id="consult-form" action="https://formsubmit.co/tyler@froglegsmedia.com" method="POST" aria-labelledby="wizard-title">
+          <input type="hidden" name="_subject" value="audiobikes consultation request">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://audiobikes.com/?consult=1">
+          <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <h3 class="wizard-title" id="wizard-title">Build your perfect bike</h3>
+
+          <div class="wizard-progress">
+            <p class="wizard-status" id="wizard-status">Step 1 of 8</p>
+            <div class="wizard-bar" id="wizard-bar" role="progressbar" aria-label="Progress" aria-valuemin="1" aria-valuemax="8" aria-valuenow="1" aria-valuetext="Step 1 of 8">
+              <div class="wizard-segments" aria-hidden="true">
+                <span class="is-on"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+
+          <fieldset class="wizard-step is-current" tabindex="-1" aria-required="true">
+            <legend>How will you ride?</legend>
+            <div class="choices">
+              <label class="choice"><input class="sr-only" type="radio" name="how_you_ride" value="Commute" required><span>Commute</span></label>
+              <label class="choice"><input class="sr-only" type="radio" name="how_you_ride" value="Weekend cruising"><span>Weekend cruising</span></label>
+              <label class="choice"><input class="sr-only" type="radio" name="how_you_ride" value="Trails and adventure"><span>Trails and adventure</span></label>
+              <label class="choice"><input class="sr-only" type="radio" name="how_you_ride" value="Events and festivals"><span>Events and festivals</span></label>
+            </div>
+            <p class="field-error" id="err-ride" role="alert"></p>
+          </fieldset>
+
+          <fieldset class="wizard-step" tabindex="-1" aria-required="true">
+            <legend>Which line interests you?</legend>
+            <div class="choices">
+              <label class="choice"><input class="sr-only" type="radio" name="line" value="Velocity" required><span>Velocity</span></label>
+              <label class="choice"><input class="sr-only" type="radio" name="line" value="Frequency"><span>Frequency</span></label>
+              <label class="choice"><input class="sr-only" type="radio" name="line" value="Not sure"><span>Not sure</span></label>
+              <label class="choice"><input class="sr-only" type="radio" name="line" value="Help me choose"><span>Help me choose</span></label>
+            </div>
+            <p class="field-error" id="err-line" role="alert"></p>
+          </fieldset>
+
+          <fieldset class="wizard-step" tabindex="-1" aria-required="true">
+            <legend>Electric assist?</legend>
+            <div class="choices">
+              <label class="choice"><input class="sr-only" type="radio" name="electric_assist" value="Yes" required><span>Yes</span></label>
+              <label class="choice"><input class="sr-only" type="radio" name="electric_assist" value="No"><span>No</span></label>
+              <label class="choice"><input class="sr-only" type="radio" name="electric_assist" value="Open to either"><span>Open to either</span></label>
+            </div>
+            <p class="field-error" id="err-electric" role="alert"></p>
+          </fieldset>
+
+          <fieldset class="wizard-step" tabindex="-1" aria-required="true">
+            <legend>How important is sound?</legend>
+            <div class="choices">
+              <label class="choice"><input class="sr-only" type="radio" name="sound" value="Background music" required><span>Background music</span></label>
+              <label class="choice"><input class="sr-only" type="radio" name="sound" value="Loud and proud"><span>Loud and proud</span></label>
+              <label class="choice"><input class="sr-only" type="radio" name="sound" value="Podcasts and calls"><span>Podcasts and calls</span></label>
+            </div>
+            <p class="field-error" id="err-sound" role="alert"></p>
+          </fieldset>
+
+          <fieldset class="wizard-step" tabindex="-1" aria-required="true">
+            <legend>What style or color vibe do you want?</legend>
+            <div class="choices">
+              <label class="choice"><input class="sr-only" type="radio" name="style" value="Matte black" required><span>Matte black</span></label>
+              <label class="choice"><input class="sr-only" type="radio" name="style" value="Clean white"><span>Clean white</span></label>
+              <label class="choice"><input class="sr-only" type="radio" name="style" value="Bold color"><span>Bold color</span></label>
+              <label class="choice"><input class="sr-only" type="radio" name="style" value="Soft neutrals"><span>Soft neutrals</span></label>
+              <label class="choice"><input class="sr-only" type="radio" name="style" value="Not sure yet"><span>Not sure yet</span></label>
+            </div>
+            <label class="field" for="style-notes">
+              <span class="field-label">Color or finish <span class="optional">(optional)</span></span>
+              <input id="style-notes" name="style_notes" type="text" maxlength="240" autocomplete="off">
+            </label>
+            <p class="field-error" id="err-style" role="alert"></p>
+          </fieldset>
+
+          <fieldset class="wizard-step" tabindex="-1" aria-required="true">
+            <legend>What's your budget?</legend>
+            <div class="choices">
+              <label class="choice"><input class="sr-only" type="radio" name="budget" value="Under $1,500" required><span>Under $1,500</span></label>
+              <label class="choice"><input class="sr-only" type="radio" name="budget" value="$1,500–3,000"><span>$1,500–3,000</span></label>
+              <label class="choice"><input class="sr-only" type="radio" name="budget" value="$3,000–5,000"><span>$3,000–5,000</span></label>
+              <label class="choice"><input class="sr-only" type="radio" name="budget" value="$5,000+"><span>$5,000+</span></label>
+            </div>
+            <p class="field-error" id="err-budget" role="alert"></p>
+          </fieldset>
+
+          <fieldset class="wizard-step" tabindex="-1">
+            <legend>How should we reach you?</legend>
+            <div class="stack">
+              <label class="field" for="consult-name">
+                <span class="field-label">Name</span>
+                <input id="consult-name" name="name" type="text" autocomplete="name" required maxlength="120">
+              </label>
+              <label class="field" for="consult-email">
+                <span class="field-label">Email</span>
+                <input id="consult-email" name="email" type="email" autocomplete="email" inputmode="email" required maxlength="200">
+              </label>
+              <label class="field" for="consult-phone">
+                <span class="field-label">Phone <span class="optional">(optional)</span></span>
+                <input id="consult-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="40">
+              </label>
+              <label class="field" for="consult-notes">
+                <span class="field-label">Notes <span class="optional">(optional)</span></span>
+                <textarea id="consult-notes" name="notes" rows="4" maxlength="2000"></textarea>
+              </label>
+            </div>
+            <p class="field-error" id="err-contact" role="alert"></p>
+          </fieldset>
+
+          <div class="wizard-step wizard-step-review" tabindex="-1" role="region" aria-labelledby="review-heading">
+            <p class="wizard-question" id="review-heading">Review</p>
+            <p class="review-help">Check your answers, then send.</p>
+            <dl class="review" id="review-list"></dl>
+          </div>
+
+          <div class="wizard-nav">
+            <button class="btn btn-ghost wizard-back is-hidden" type="button">Back</button>
+            <button class="btn wizard-next" type="button">Next</button>
+            <button class="btn wizard-submit" type="submit">Submit</button>
+          </div>
+        </form>
+
+        <p class="prefer-email"><a href="mailto:tyler@froglegsmedia.com?subject=audiobikes%20consultation">Prefer email?</a></p>
       </section>
 
       <section class="band waitlist" id="waitlist" aria-labelledby="waitlist-heading">
@@ -89,8 +226,12 @@
     </main>
 
     <footer class="site-footer">
+      <svg class="footer-logo" viewBox="670 690 9872 1220" role="img" aria-label="Audiobikes">
+        <image href="assets/audiobikes-logo.svg" x="0" y="0" width="11213.1" height="2601.6"/>
+      </svg>
       <p>© 2026 Audiobikes. All rights reserved.</p>
     </footer>
   </div>
+  <script src="script.js"></script>
 </body>
 </html>
