@@ -46,10 +46,6 @@ body {
   line-height: 1.5;
 }
 
-.defs {
-  display: none;
-}
-
 h1,
 h2,
 h3,
@@ -134,9 +130,11 @@ h2 {
   color: var(--ink);
 }
 
-.bike {
-  width: min(78%, 220px);
+.model-art img {
+  display: block;
+  width: 100%;
   height: auto;
+  object-fit: contain;
 }
 
 h3 {
