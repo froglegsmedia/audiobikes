@@ -337,7 +337,7 @@ html.is-consulted .consult-note {
 
 .wizard-progress {
   display: none;
-  margin-bottom: 1.15rem;
+  margin-bottom: 1.25rem;
 }
 
 html.js .wizard-progress {
@@ -382,6 +382,7 @@ html.js .wizard-progress {
 
 .wizard-step-review {
   display: none;
+  gap: 0;
 }
 
 html.js .wizard-step {
@@ -394,12 +395,23 @@ html.js .wizard-step.is-current {
 
 .wizard-step legend,
 .wizard-question {
-  margin: 0;
+  margin: 0 0 1.25rem;
   padding: 0;
   font-weight: 800;
   letter-spacing: -0.04em;
   font-size: 1.2rem;
   line-height: 1.15;
+}
+
+@media (min-width: 720px) {
+  .wizard-progress {
+    margin-bottom: 1.5rem;
+  }
+
+  .wizard-step legend,
+  .wizard-question {
+    margin-bottom: 1.5rem;
+  }
 }
 
 .wizard-step:focus {
@@ -496,7 +508,7 @@ html.js .wizard-step.is-current {
 }
 
 .review-help {
-  margin: 0;
+  margin: 0 0 1rem;
   font-size: 0.95rem;
 }
 
